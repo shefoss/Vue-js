@@ -35,15 +35,12 @@
     <button @click="isValid = !isValid">Toggle Validation</button>
   </div>
   <div class="products">
-    <h1>Products</h1>
+    <h2>Products</h2>
     <ul class="product-list">
       <li v-for="product in products" :key="product.id" class="product-item">
-        <h2 style="justify-content: center">
+        <h3 style="justify-content: center">
           {{ product.title }}
-        </h2>
-        <p style="font-size: 14px">
-          {{ product.description }}
-        </p>
+        </h3>
         <p>
           <span style="color: red">Id:</span>
           {{ product.id }}
@@ -101,7 +98,7 @@ export default {
 }
 
 .product-item {
-  flex: 1 1 calc(20% - 20px);
+  flex: 1 1 calc(30% - 20px);
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -112,7 +109,6 @@ export default {
 .product-item p {
   display: flex;
   font-weight: bold;
-  font-size: 14px;
 }
 
 .product-image {
