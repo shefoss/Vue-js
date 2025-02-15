@@ -34,13 +34,19 @@
     </keep-alive>
     <button @click="isValid = !isValid">Toggle Validation</button>
   </div>
-  <hr />
-  <div>
+  <div class="products">
     <h2>Products</h2>
-    <ul>
-      <li v-for="product in products" :key="product.id">
-        <p><strong>Name: </strong>{{ product.title }}</p>
-        <p><strong>Id: </strong>{{ product.id }}</p>
+    <ul class="product-list">
+      <li v-for="product in products" :key="product.id" class="product-item">
+        <h3 style="justify-content: center">
+          {{ product.title }}
+        </h3>
+        <p>
+          <span style="color: red">Id:</span>
+          {{ product.id }}
+        </p>
+        <p><span style="color: red">Brand:</span>{{ product.brand }}</p>
+        <img :src="product.images" :alt="product.title" class="product-image" />
       </li>
     </ul>
   </div>
@@ -80,3 +86,41 @@ export default {
   },
 };
 </script>
+
+<style>
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.product-item {
+  flex: 1 1 calc(30% - 20px);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.product-item p {
+  display: flex;
+  font-weight: bold;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+</style>
