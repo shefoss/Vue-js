@@ -14,4 +14,4 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-mongoose.connect("mongodb+srv://khalid:khalid147369@cluster0.t47k6tg.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0").then(() => { console.log("connected seccessfully") }).catch((err) => { console.log(err) })
+mongoose.connect(process.env.CONNECTION_STRING).then(() => { console.log("connected seccessfully") }).catch((err) => { console.log(err) })
