@@ -24,21 +24,20 @@
   min-height: 100vh;
   background-color: #f4f4f4;
   flex-direction: column;
+  /* background-image: url("https://images.freeimages.com/slides/4f53a54c6e114a76a99b9df9573a8259.webp"); */
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  width: 28rem;
+  width: 350px;
   height: 417px;
   gap: 15px;
   padding: 20px;
   background-color: white;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  top: -29px;
-  position: relative;
-  padding-bottom: 0px;
 }
 
 .form-row {
@@ -49,9 +48,7 @@
 
 label {
   font-size: 16px;
-  display: flex;
-  left: 10px;
-  position: relative;
+  width: 80px;
 }
 
 input {
