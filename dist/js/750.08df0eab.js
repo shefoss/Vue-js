@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_cli"]=self["webpackChunkvue_cli"]||[]).push([[750],{9750:function(e,a,l){l.r(a),l.d(a,{default:function(){return o}});var r=l(6768);function t(e,a){return(0,r.uX)(),(0,r.CE)("div",null,a[0]||(a[0]=[(0,r.Fv)('<h1>Login Page</h1><form><label for="email">Email</label><input type="email" id="email"><label for="password">Password</label><input type="password" id="password"><button type="submit"></button></form>',2)]))}var u=l(1241);const n={},i=(0,u.A)(n,[["render",t]]);var o=i}}]);
+//# sourceMappingURL=750.08df0eab.js.map
